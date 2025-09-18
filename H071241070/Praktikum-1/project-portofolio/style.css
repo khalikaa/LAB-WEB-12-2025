@@ -1,0 +1,397 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* ================= Header ================ */
+header {
+    background-color: #4a4e69;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-table;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header .logo h1 {
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+/* ================= Hero Section =============== */
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f2e9e4;
+}
+/*profile*/
+.hero .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4a4e69;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #333;
+    font-style: italic;
+}
+
+/* Quick Stats Section */
+.quick-stats {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #f2e9e4;
+}
+
+.quick-stats table {
+    margin: 0 auto;
+    width: 60%;
+    border-collapse: collapse;
+}
+
+.quick-stats table th,
+.quick-stats table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.quick-stats table th {
+    background-color: #4a4e69;
+    color: white;
+}
+
+.quick-stats table td {
+    background-color: #fff;
+    color: #333;
+}
+
+/* ================= About Section =========== */
+.about-me, .Bio, .education, .skills, .hobbies {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-me table,
+.skills ul,
+.hobbies ol {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.about-me table th,
+.about-me table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.skills ul, .hobbies ol {
+    list-style: none;
+}
+
+.skills ul li,
+.hobbies ol li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.about-me table {
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.about-me table th,
+.about-me table td {
+    padding: 15px;
+    border: 2px solid #060303;
+    text-align: left;
+}
+.about-me h2{
+    font-size: 32px;
+    color:#4a4e69;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*warna header tabel */
+.about-me table th {
+    background-color: #4a4e69;
+    color: white; /*Warna teks di header table */
+}
+/*warna isi tabel */
+.about-me table td {
+    background-color: #f2e9e4;
+    color: #333;
+}
+
+/* Styling untuk bio section */
+.Bio {
+    padding: 40px 0;
+    max-width: 800px; /* Optional, untuk memberi batas lebar */
+    margin: 0 auto;    /* Agar tetap rata tengah secara keseluruhan */
+}
+
+/* Menjaga judul BIO tetap di tengah */
+.Bio h2 {
+    font-size: 32px;
+    color: #4a4e69;
+    text-align: center; /* Rata tengah untuk judul BIO */
+    margin-bottom: 20px;
+}
+
+/* Rata kiri-kanan untuk bio */
+.Bio p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;  /* Rata kiri dan kanan */
+    margin-bottom: 20px;
+}
+
+/* Styling untuk judul tambahan jika diperlukan */
+.Bio h3 {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #4a4e69;
+}
+
+/* Styling untuk list keahlian atau hobi */
+.Bio ul {
+    list-style: none;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: left;  /* Untuk memastikan teks dalam list tetap rata kiri */
+}
+
+.Bio ul li {
+    margin-bottom: 10px;
+}
+/* =================== Riwayat Pendidikan ================== */
+.education {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f2e9e4;
+}
+
+.education h2 {
+    font-size: 32px;
+    color: #4a4e69;
+    margin-bottom: 20px;
+}
+
+.education dl {
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 18px;
+}
+
+.education dt {
+    font-weight: bold;
+}
+
+.education dd {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* ===================== Keahlian ========================== */
+.skills {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.skills h2 {
+    font-size: 32px;
+    color: #4a4e69;
+    margin-bottom: 20px;
+}
+
+.skills ul {
+    list-style-type: disc;
+    font-size: 18px;
+    text-align: left;
+    margin: 0 auto;
+    width: 60%;
+    padding-left:20px ;
+}
+
+.skills ul li {
+    margin-bottom: 10px;
+}
+
+/* ===================== Hobi & Minat ===================== */
+.hobbies {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f2e9e4;
+}
+
+.hobbies h2 {
+    font-size: 32px;
+    color: #4a4e69;
+    margin-bottom: 20px;
+}
+
+.hobbies ol {
+    list-style-type: decimal;
+    font-size: 18px;
+    text-align: left;
+    margin: 0 auto;
+    width: 60%;
+    padding-left: 20px;
+}
+
+.hobbies ol li {
+    margin-bottom: 10px;
+}
+
+
+/* ====================Contact Section ======================*/
+.contact-info {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f2e9e4;
+}
+
+.contact-info a {
+    color: #4a4e69;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact-form form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    font-size: 18px;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #4a4e69;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-form button:hover {
+    background-color: #333;
+}
+
+/* ======================== Footer ============== */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+footer .social-media a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+/* =============== Responsive Design ============ */
+@media (max-width: 768px) { /*atur profil ukur*/
+    .hero .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .quick-stats table,
+    .about-me table,
+    .skills ul,
+    .hobbies ol {
+        width: 80%;
+    }
+
+    .contact-form form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .quick-stats table {
+        width: 100%;
+    }
+
+    .skills ul li,
+    .hobbies ol li {
+        font-size: 16px;
+    }
+}
