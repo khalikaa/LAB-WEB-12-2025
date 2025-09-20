@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <link rel="stylesheet" href="style.css" />
+
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html">HOME</a>
+          </li>
+          <li>
+            <a href="about.html">ABOUT</a>
+          </li>
+          <li>
+            <a href="contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="center">
+      <h2>Informasi Kontak</h2>
+      <table border="1" id="contact-table">
+        <tr>
+          <td>Email</td>
+          <td>arilsarda16@gmail.com</td>
+        </tr>
+        <tr>
+          <td>No. Telepon</td>
+          <td>+6285657178694</td>
+        </tr>
+        <tr>
+          <td>LinkedIn</td>
+          <td>AS'SYIEKRIL FIKRYAN SARDA</td>
+        </tr>
+        <tr>
+          <td>Instagram</td>
+          <td>@rilzzz.7_</td>
+        </tr>
+        <tr>
+          <td>GitHub</td>
+          <td>Assyiekril</td>
+        </tr>
+      </table>
+      <br />
+
+      <div class="form-container">
+        <h2>Form Kontak</h2>
+        <form action="">
+          <div class="form-group">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="telepon">No. Telepon:</label>
+            <input type="number" id="telepon" name="telepon" required />
+          </div>
+
+          <div class="form-group">
+            <label>Tipe Pesan:</label>
+            <div class="radio-group">
+              <label
+                ><input type="radio" name="tipe_pesan" value="pertanyaan" />
+                Pertanyaan</label
+              >
+              <label
+                ><input type="radio" name="tipe_pesan" value="kritik" />
+                Kritik</label
+              >
+              <label
+                ><input type="radio" name="tipe_pesan" value="saran" />
+                Saran</label
+              >
+              <label
+                ><input type="radio" name="tipe_pesan" value="kerjasama" />
+                Kerjasama</label
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="detail">Detail:</label>
+            <textarea name="detail" id="detail" rows="5"></textarea>
+          </div>
+
+          <div class="checkbox-container">
+            <input
+              type="checkbox"
+              id="persetujuan"
+              name="persetujuan"
+              required
+            />
+            <label for="persetujuan"
+              >Saya menyetujui syarat dan ketentuan yang berlaku.</label
+            >
+          </div>
+
+          <input type="submit" value="Kirim Pesan" />
+        </form>
+      </div>
+    </div>
+    
+    <footer>
+        <p>
+            &copy; 2025
+        </p>
+    </footer>
+  </body>
+</html>
