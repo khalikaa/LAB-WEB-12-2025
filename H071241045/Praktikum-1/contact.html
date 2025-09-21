@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Website Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="index.html" class="logo">Seonghyeon</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Tentang Saya</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section-card">
+            <h2 class="section-heading">Hubungi Saya</h2>
+            
+            <div class="contact-info">
+                <h3>Informasi Kontak</h3>
+                <table>
+                    <tr>
+                        <th><i class="fas fa-envelope icon"></i> Email</th>
+                        <td>seonghyeon13@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <th><i class="fas fa-phone icon"></i> Nomor Telepon</th>
+                        <td>+62 812-3456-7890</td>
+                    </tr>
+                    <tr>
+                        <th><i class="fab fa-linkedin icon"></i> LinkedIn</th>
+                        <td><a href="https://linkedin.com/in/seonghyeon" >linkedin.com/in/seonghyeon</a></td>
+                    </tr>
+                    <tr>
+                        <th><i class="fab fa-instagram icon"></i> Instagram</th>
+                        <td><a href="https://www.instagram.com/p/DOi1AssD7T8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">@seonghyeon</a></td>
+                    </tr>
+                    <tr>
+                        <th><i class="fab fa-github icon"></i> GitHub</th>
+                        <td><a href="https://github.com/Shabrinazahrahramadhani/Shabrinazahrahramadhani.github.io.git">github.com/seonghyeon</a></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h2 class="section-heading">Kirim Pesan</h2>
+            <form action="#" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="nama">Nama:</label>
+                    <input type="text" id="nama" name="nama" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telepon">Nomor Telepon:</label>
+                    <input type="tel" id="telepon" name="telepon">
+                </div>
+                
+                <div class="form-group">
+                    <label>Tipe Pesan:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="pertanyaan" name="tipe_pesan" value="pertanyaan" required>
+                        <label for="pertanyaan">Pertanyaan</label>
+                        <input type="radio" id="kritik" name="tipe_pesan" value="kritik">
+                        <label for="kritik">Kritik</label>
+                        <input type="radio" id="saran" name="tipe_pesan" value="saran">
+                        <label for="saran">Saran</label>
+                        <input type="radio" id="kerjasama" name="tipe_pesan" value="kerjasama">
+                        <label for="kerjasama">Kerja Sama</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pesan">Pesan Detail:</label>
+                    <textarea id="pesan" name="pesan" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="persetujuan" name="persetujuan" required>
+                    <label for="persetujuan">Saya setuju data saya akan di proses.</label>
+                </div>
+
+                <button type="submit" class="submit-button">Kirim Pesan</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Seonghyeon. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
