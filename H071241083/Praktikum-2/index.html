@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelaporan Bug Game Fish It</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-white font-sans">
+
+    <nav class="bg-gray-900 p-4 fixed w-full z-10 top-0 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="flex items-center space-x-2">
+            <img src="https://tr.rbxcdn.com/180DAY-3b5fe229a1ef2f73cf33cca7133886db/500/280/Image/Jpeg/noFilter" alt="Logo Fish It" class="h-8 w-8 rounded-full">
+            <span class="text-2xl font-bold text-cyan-400">Fish It</span>
+        </a>
+        <div class="space-x-4">
+            <a href="#beranda" class="hover:text-cyan-400 transition-colors">Beranda</a>
+            <a href="#tentang" class="hover:text-cyan-400 transition-colors">Tentang Kami</a>
+            <a href="#laporan" class="hover:text-cyan-400 transition-colors">Laporkan Bug</a>
+            <a href="#kontak" class="hover:text-cyan-400 transition-colors">Kontak</a>
+        </div>
+    </div>
+    </nav>
+
+    <header id="beranda" class="relative bg-cover bg-center h-screen flex items-center justify-center text-center p-4" style="background-image: url('https://tr.rbxcdn.com/180DAY-3b5fe229a1ef2f73cf33cca7133886db/500/280/Image/Jpeg/noFilter');">
+        <div class="absolute inset-0 bg-gray-950 opacity-80"></div>
+        <div class="relative z-10">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">Fish It</h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-8">Bantu Kami Ciptakan Pengalaman Bermain Terbaik Tanpa Bug!</p>
+            <a href="#laporan" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105 inline-block">Laporkan Bug Sekarang</a>
+        </div>
+    </header>
+
+    <section id="tentang" class="py-20 bg-gray-900 min-h-screen">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Mengapa Laporan Anda Penting?</h2>
+            <p class="text-gray-300 max-w-3xl mx-auto mb-12">Layanan ini dibuat untuk mempermudah pemain melaporkan bug. Setiap laporan Anda akan membantu tim pengembang dalam meningkatkan kualitas permainan dan memastikan pengalaman bermain yang optimal.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left max-w-5xl mx-auto">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:bg-gray-700 transition-colors duration-300">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-2">Proses Laporan Mudah & Cepat</h3>
+                    <p class="text-gray-300">Formulir kami dirancang agar Anda bisa melaporkan bug dengan cepat tanpa kerumitan.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:bg-gray-700 transition-colors duration-300">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-2">Tim Pengembang Siap Bertindak</h3>
+                    <p class="text-gray-300">Setiap laporan yang masuk akan segera ditinjau oleh tim pengembang kami untuk segera ditindaklanjuti.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:bg-gray-700 transition-colors duration-300">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-2">Kontribusi Membangun Komunitas</h3>
+                    <p class="text-gray-300">Partisipasi Anda sangat berharga untuk menciptakan pengalaman bermain yang lebih baik bagi seluruh pemain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="laporan" class="py-20 bg-gray-950 min-h-screen">
+        <div class="container mx-auto max-w-2xl p-6 rounded-lg shadow-2xl">
+            <h2 class="text-3xl font-bold text-center mb-8">Laporkan Bug</h2>
+            <form class="space-y-6">
+                <div>
+                    <label for="nama" class="block text-sm font-medium text-gray-300 mb-1">Nama Pengguna (Opsional)</label>
+                    <input type="text" id="nama" class="w-full p-3 bg-gray-900 border border-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400 text-white" placeholder="Masukkan nama pengguna Anda">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Alamat Email (Opsional)</label>
+                    <input type="email" id="email" class="w-full p-3 bg-gray-900 border border-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400 text-white" placeholder="Masukkan email Anda">
+                </div>
+                <div>
+                    <label for="judul" class="block text-sm font-medium text-gray-300 mb-1">Judul Bug</label>
+                    <input type="text" id="judul" class="w-full p-3 bg-gray-900 border border-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400 text-white" placeholder="Contoh: Bug saat memancing di area X" required>
+                </div>
+                <div>
+                    <label for="deskripsi" class="block text-sm font-medium text-gray-300 mb-1">Deskripsi Detail Bug</label>
+                    <textarea id="deskripsi" rows="5" class="w-full p-3 bg-gray-900 border border-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400 text-white" placeholder="Jelaskan langkah-langkah untuk mereplikasi bug dan apa yang terjadi" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 rounded-md transition-colors">Kirim Laporan</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="kontak" class="bg-gray-950 py-12 text-gray-400 text-center">
+        <div class="container mx-auto">
+            <div class="mb-4">
+                <h3 class="text-xl font-bold text-white mb-2">Kontak Kami</h3>
+                <p>Email: support@fishitgame.com</p>
+            </div>
+            <div class="mb-4">
+                <h3 class="text-xl font-bold text-white mb-2">Ikuti Kami</h3>
+                <div class="flex justify-center space-x-4">
+                    <a href="#" class="hover:text-white transition-colors">Facebook</a>
+                    <a href="#" class="hover:text-white transition-colors">Twitter</a>
+                    <a href="#" class="hover:text-white transition-colors">Instagram</a>
+                </div>
+            </div>
+            <div class="border-t border-cyan-400 pt-6">
+                <p>&copy; 2025 Fish It. All Rights Reserved.</p>
+                <a href="#" class="text-sm hover:underline mt-1 block">Kebijakan Privasi</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
