@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — A. Izza syathra </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">NM</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Kontak</h1>
+
+    <!-- Contact info table -->
+    <section class="contact-info">
+      <h2>Informasi Kontak</h2>
+      <table class="info-table">
+        <tr><th>Email</th><td>andiizzasyathraatra.com</td></tr>
+        <tr><th>Nomor Telepon</th><td>+62 812 3456 7890</td></tr>
+        <tr><th>LinkedIn</th><td><a href="#">/in/izzsythra</a></td></tr>
+        <tr><th>Instagram</th><td><a href="#">@izzsythra</a></td></tr>
+        <tr><th>GitHub</th><td><a href="#">github.com/izzasyathra</a></td></tr>
+      </table>
+    </section>
+
+    <!-- Contact form -->
+    <section class="contact-form">
+      <h2>Form Kontak</h2>
+      <form action="#" method="post" class="form" novalidate>
+        <div class="form-row">
+          <label for="name">Nama</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Nomor Telepon</label>
+          <input id="phone" name="phone" type="tel" required />
+        </div>
+
+        <fieldset class="form-row">
+          <legend>Tipe Pesan</legend>
+          <label><input type="radio" name="type" value="pertanyaan" required /> Pertanyaan</label>
+          <label><input type="radio" name="type" value="kritik" /> Kritik</label>
+          <label><input type="radio" name="type" value="saran" /> Saran</label>
+          <label><input type="radio" name="type" value="kerjasama" /> Kerjasama</label>
+        </fieldset>
+
+        <div class="form-row">
+          <label for="message">Pesan</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <div class="form-row checkbox-row">
+          <label><input type="checkbox" id="consent" name="consent" required /> Saya menyetujui penggunaan data sesuai kebutuhan kontak.</label>
+        </div>
+
+        <div class="form-row">
+          <button type="submit" class="btn">Kirim Pesan</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year-contact"></span> Nama Mahasiswa. Kontak tersedia melalui email &amp; LinkedIn.</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year-contact').textContent = new Date().getFullYear();</script>
+</body>
+</html>
