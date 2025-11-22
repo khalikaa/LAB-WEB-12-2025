@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game UNO Neon Glitch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body class="fade-body">
+    <div id="game-container">
+        <header>
+            <h1 id="game-title"></h1>
+            <div id="saldo"></div>
+        </header>
+
+        <main>
+            <section id="bot-area">
+                <h2 class="player-label">BOT</h2>
+                <div id="bot-cards" class="card-row"></div>
+            </section>
+
+            <section id="middle-area">
+                <div id="discard-pile">
+                    <img src="asset/card_back.png" alt="Kartu Teratas" id="top-card" class="neon-card">
+                </div>
+                <div id="deck-area">
+                    <img src="asset/card_back.png" alt="Deck" id="deck" class="neon-card">
+                    <button id="draw-btn-middle" class="neon-btn">
+                        <i class="fa-solid fa-hand-paper"></i> Ambil Kartu
+                    </button>
+                </div>
+            </section>
+
+            <section id="player-area">
+                <h2 class="player-label">ANDA</h2>
+                <div id="player-cards" class="card-row"></div>
+            </section>
+        </main>
+
+        <footer>
+            <div id="status"></div>
+        </footer>
+    </div>
+
+    <div id="side-controls">
+        <input id="taruhan" type="number" placeholder="Taruhan (Min 100)" min="100" />
+        <button id="mulai-btn" class="neon-btn">Mulai Ronde</button>
+        <button id="draw-btn-side" class="neon-btn">Ambil Kartu</button>
+        <button id="uno-btn" class="neon-btn uno-btn-style">UNO!</button>
+        <button id="call-uno-btn" class="neon-btn call-uno-btn-style">Call UNO</button>
+    </div>
+
+    <div id="modal-overlay" class="glitch-overlay">
+        <div id="modal-box" class="glitch-box">
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
