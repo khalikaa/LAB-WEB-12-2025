@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — A. Izza Syathra</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" >
+    <div class="container header-inner">
+      <a class="logo" href="index.html">NM</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>A. Izza Syathra</h1>
+        <p class="tagline"> Bersyukur;  </em></p>
+      </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="quick-stats">
+      <h2>Quick Stats</h2>
+      <table class="stats-table">
+        <tr>
+          <th>Jumlah Project Selesai</th>
+          <td>4</td>
+        </tr>
+        <tr>
+          <th>Tahun Pengalaman</th>
+          <td>2 tahun</td>
+        </tr>
+        <tr>
+          <th>Teknologi Dikuasai</th>
+          <td>Python</td>
+        </tr>
+        <tr>
+          <th>Status Akademik</th>
+          <td>S1 — Aktif</td>
+        </tr>
+      </table>
+    </section>
+
+    
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> A. Izza syathra. Semua hak cipta.</p>
+      <p class="social">
+        <a href="#" aria-label="Instagram">@izzsythra</a> •
+        <a href="#" aria-label="GitHub">izzasythra</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // isi tahun otomatis
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+/* ==================================== */
+/* GLOBAL & BASE STYLES - PINK & BLUE NEON */
+/* ==================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier Prime', monospace; /* Font monospace/futuristik */
+}
+
+/* Latar Belakang Putih */
+body {
+    margin: 0;
+    background-color: #ffffff;
+    background-image: url('background/circuit_pattern_dark.png'); /* Opsional: Pola sirkuit gelap */
+    color: #FF1493; /* Warna teks default: Deep Pink */
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    text-shadow: 0 0 5px #FF1493; /* Efek glow pada teks */
+}
+
+/* Animasi Fade In -> Glitch In */
+.fade-body {
+    opacity: 0;
+    animation: glitchIn 1.5s ease forwards;
+}
+
+@keyframes glitchIn {
+    0% { opacity: 0; transform: skewX(10deg); }
+    50% { opacity: 0.5; transform: skewX(-5deg); }
+    100% { opacity: 1; transform: skewX(0); }
+}
+
+/* Warna Neon (untuk digunakan di JS dan Glow) */
+.neon-red { color: #FF1493; text-shadow: 0 0 10px #FF1493; } /* Pink */
+.neon-blue { color: #00c7ff; text-shadow: 0 0 10px #00c7ff; } /* Neon Blue */
+.neon-green { color: #00ff66; text-shadow: 0 0 10px #00ff66; }
+.neon-yellow { color: #ffeb00; text-shadow: 0 0 10px #ffeb00; }
+
+/* ==================================== */
+/* CONTAINER & HEADER */
+/* ==================================== */
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(1px);
+}
+
+header, footer {
+    /* Latar belakang putih semi-transparan untuk kontras pada body putih */
+    background-color: linear-gradient(135deg, #ad65ad 0%, #ee76e4 100%); 
+    border: none;
+    text-align: center;
+    padding: 10px;
+}
+header {
+    border-bottom: 2px solid #FF1493; /* Pink */
+}
+footer {
+    border-top: 2px solid #FF1493; /* Pink */
+}
+
+#game-title {
+    font-size: 44px;
+    font-weight: bold;
+    text-shadow: 0 0 15px #FF1493, 0 0 5px #FF1493; /* Glow Pink */
+}
+
+#saldo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00c7ff; /* Neon biru */
+    text-shadow: 0 0 8px #00c7ff;
+    margin-top: 10px;
+}
+
+/* ==================================== */
+/* MAIN AREA & KARTU (PERBAIKAN LAYOUT AKHIR) */
+/* ==================================== */
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    align-items: center;
+    padding: 5px 0; 
+    min-height: 0;
+    position: relative; /* Ditambahkan untuk z-index */
+    z-index: 10;
+}
+
+.player-label {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin-bottom: 5px; 
+    color: #FF1493; /* Pink */
+    text-shadow: 0 0 8px #FF1493;
+}
+
+.card-row {
+    display: flex;
+    gap: 5px; 
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px; 
+}
+
+/* ... (Area Bot dan Player tetap sama) ... */
+
+/* Area Tengah (kartu buangan dan deck) */
+#middle-area {
+    flex-grow: 0; 
+    flex-shrink: 0;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    position: relative; /* Ditambahkan untuk z-index */
+    z-index: 20;
+}
+
+
+/* Kartu Placeholder */
+.card-row img, #top-card, #deck {
+    width: 75px; 
+    border-radius: 4px; 
+    border: 3px solid #FF1493; /* Pink */
+    box-shadow: 0 0 8px #FF1493;
+    transition: all 0.2s ease;
+    cursor: default;
+    flex-shrink: 0;
+}
+
+/* Kartu Pemain - Hover Effect */
+#player-cards img:hover {
+    transform: translateY(-10px) scale(1.05); 
+    box-shadow: 0 0 15px #00c7ff, 0 0 5px #00c7ff; /* Blue Glow */
+    border-color: #00c7ff;
+    cursor: pointer;
+}
+
+
+#deck-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+#top-card, #deck {
+    width: 85px; 
+}
+#deck {
+    cursor: pointer;
+}
+
+/* ==================================== */
+/* FOOTER (STATUS) */
+/* ==================================== */
+
+footer {
+    flex-shrink: 0; 
+    padding: 8px 10px; 
+}
+
+#status {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: pulse 1.5s infinite alternate; 
+    margin: 0; 
+}
+
+@keyframes pulse {
+    from { opacity: 0.8; }
+    to { opacity: 1; text-shadow: 0 0 10px currentColor; }
+}
+
+
+/* ==================================== */
+/* TOMBOL & KONTROL */
+/* ==================================== */
+
+.neon-btn {
+    padding: 8px 18px; 
+    font-size: 15px; 
+    background: transparent;
+    color: #FF1493; /* Pink */
+    border: 2px solid #FF1493; /* Pink */
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 0 5px #FF1493;
+    cursor: pointer;
+    transition: all 0.15s ease-out;
+    text-transform: uppercase;
+}
+
+.neon-btn:hover:enabled {
+    background-color: rgba(255, 20, 147, 0.15); /* Pink hover */
+    box-shadow: 0 0 15px #FF1493, 0 0 5px #FF1493;
+    transform: scale(1.05);
+}
+
+.neon-btn:active {
+    transform: scale(0.98);
+}
+
+.neon-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: #444;
+    box-shadow: none;
+}
+
+/* Draw Button Tengah (Warna Pink) */
+#draw-btn-middle {
+    color: #FF1493; /* Pink */
+    border-color: #FF1493;
+    box-shadow: 0 0 5px #FF1493;
+    position: relative; /* Ditambahkan untuk z-index */
+    z-index: 25;
+}
+#draw-btn-middle:hover:enabled {
+    background-color: rgba(255, 20, 147, 0.15);
+    box-shadow: 0 0 15px #FF1493, 0 0 5px #FF1493;
+}
+
+/* UNO & Call UNO Buttons (Warna Pink) */
+.uno-btn-style, .call-uno-btn-style {
+    color: #FF1493; /* Pink */
+    border-color: #FF1493;
+    box-shadow: 0 0 5px #FF1493;
+}
+.uno-btn-style:hover:enabled, .call-uno-btn-style:hover:enabled {
+    background-color: rgba(255, 20, 147, 0.15);
+    box-shadow: 0 0 15px #FF1493, 0 0 5px #FF1493;
+}
+
+/* Side Controls & Input */
+#side-controls {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 100; /* PENTING: Untuk memastikan tombol bisa ditekan */
+}
+
+#taruhan {
+    /* Input diubah ke latar putih agar kontras */
+    background-color: #fff;
+    color: #FF1493; /* Pink text */
+    border: 1px solid #00c7ff; /* Blue border */
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 0 5px #00c7ff;
+}
+
+
+/* ==================================== */
+/* MODAL GLITCH */
+/* ==================================== */
+
+#modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+    /* Latar belakang putih semi-transparan */
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 9999;
+}
+
+.glitch-box {
+    background: #ffffff; /* Latar belakang putih */
+    color: #FF1493; /* Pink text */
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 300px;
+    text-align: center;
+    border: 3px solid #FF1493; /* Pink border */
+    box-shadow: 0 0 20px #FF1493, inset 0 0 5px #FF1493;
+    animation: boxGlitch 1s infinite alternate;
+}
+
+@keyframes boxGlitch {
+    0% { transform: translate(0); }
+    30% { transform: translate(-1px, 1px); }
+    100% { transform: translate(1px, -1px); }
+}
+
+#modal-box p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px #00c7ff; /* Blue shadow */
+}
+
+#modal-box div {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+#modal-box button {
+    padding: 10px 15px;
+    border-radius: 4px;
+    /* Tombol Modal: Default Pink, Hover Blue */
+    background: #fff;
+    border: 2px solid #FF1493;
+    color: #FF1493;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 8px #FF1493;
+    transition: 0.1s;
+}
+
+#modal-box button:hover {
+    background-color: rgba(0, 199, 255, 0.2); /* Blue hover background */
+    border-color: #00c7ff;
+    color: #00c7ff;
+    box-shadow: 0 0 8px #00c7ff;
+}

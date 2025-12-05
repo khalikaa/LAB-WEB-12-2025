@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sewa Pelatih Tenis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-xl fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-green-600">TennisCoach</h1>
+      <ul class="flex space-x-6">
+        <li><a href="#home" class="hover:text-green-600">Beranda</a></li>
+        <li><a href="#about" class="hover:text-green-600">Tentang</a></li>
+        <li><a href="#features" class="hover:text-green-600">Layanan</a></li>
+        <li><a href="#contact" class="hover:text-green-600">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="h-screen bg-gradient-to-r from-green-500 to-lime-600 flex items-center justify-center text-center text-white px-6">
+    <div class="animate-fade-in">
+      <h2 class="text-4xl md:text-6xl font-bold mb-4">Sewa Pelatih Tenis Profesional</h2>
+      <p class="text-lg mb-6">Latihan lebih terarah dengan pelatih bersertifikat dan berpengalaman.</p>
+      <a href="#contact" class="bg-white text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">Booking Sekarang</a>
+    </div>
+  </header>
+
+  <!-- Tentang -->
+  <section id="about" class="py-16 max-w-6xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-8">Tentang Kami</h3>
+    <p class="text-center text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+      Kami menyediakan pelatih tenis profesional untuk semua level, mulai dari pemula hingga atlet kompetitif. 
+      Dengan program latihan yang terstruktur, kami membantu Anda meningkatkan keterampilan, stamina, dan strategi bermain.
+    </p>
+  </section>
+
+  <!-- Layanan / Features -->
+  <section id="features" class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-12">Layanan Kami</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white shadow-lg rounded-xl p-6 text-center hover:scale-105 transform transition">
+          <h4 class="text-xl font-semibold mb-4">Latihan Pemula</h4>
+          <p class="text-gray-600">Belajar dasar tenis dengan teknik yang benar.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-xl p-6 text-center hover:scale-105 transform transition">
+          <h4 class="text-xl font-semibold mb-4">Pelatihan Kompetitif</h4>
+          <p class="text-gray-600">Program khusus untuk turnamen dan kompetisi.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-xl p-6 text-center hover:scale-105 transform transition">
+          <h4 class="text-xl font-semibold mb-4">Latihan Privat</h4>
+          <p class="text-gray-600">Sesi satu lawan satu dengan fokus penuh pada Anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimoni -->
+  <section class="py-16 max-w-6xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-12">Testimoni</h3>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white shadow-md p-6 rounded-xl hover:shadow-xl transition">
+        <p class="italic mb-4">“Pelatihnya ramah dan profesional, permainan saya jauh lebih meningkat.”</p>
+        <span class="font-semibold">- Rina, Mahasiswa</span>
+      </div>
+      <div class="bg-white shadow-md p-6 rounded-xl hover:shadow-xl transition">
+        <p class="italic mb-4">“Program latihannya jelas dan sangat membantu persiapan turnamen.”</p>
+        <span class="font-semibold">- Andi, Atlet Junior</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="py-16 bg-green-600 text-white">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-6">Booking Pelatih</h3>
+      <form class="space-y-4">
+        <input type="text" placeholder="Nama" class="w-full p-3 rounded text-black">
+        <input type="email" placeholder="Email" class="w-full p-3 rounded text-black">
+        <textarea placeholder="Jadwal atau kebutuhan latihan" class="w-full p-3 rounded text-black"></textarea>
+        <button class="bg-white text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">Kirim</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-6">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+      <p>&copy; 2025 TennisCoach. Semua Hak Dilindungi.</p>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="#" class="hover:text-white">@teniscourt</a>
+        <a href="#" class="hover:text-white">+623333333333</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Animasi sederhana -->
+  <style>
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 1.2s ease-in-out;
+    }
+  </style>
+
+</body>
+</html>

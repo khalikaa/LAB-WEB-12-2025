@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — A. Izza Syathra</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Beranda</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Tentang Saya</h1>
+
+    <!-- Personal info table -->
+    <section class="personal-info">
+      <h2>Informasi Personal</h2>
+      <table class="info-table">
+        <tr><th>Nama Lengkap</th><td>A. Izza syathra</td></tr>
+        <tr><th>NIM</th><td>H071241006 </td></tr>
+        <tr><th>Program Studi</th><td>Sistem informasi</td></tr>
+        <tr><th>Universitas</th><td>Universitas Hasanuddin</td></tr>
+        <tr><th>Email</th><td>email@contoh.com</td></tr>
+        <tr><th>Tempat, Tanggal Lahir</th><td>Kota Makassar, 01 Januari 2000</td></tr>
+        <tr><th>Alamat</th><td>Jl. Contoh No. 1, Kota Makassar</td></tr>
+      </table>
+    </section>
+
+    <!-- Bio -->
+    <section class="bio">
+      <h2>Bio</h2>
+      <p>Saya adalah seorang mahasiswa <strong>Sistem informasi </strong>. Selama beberapa tahun terakhir saya aktif mempelajari <em> bahasa pemograman </em> dan desain antarmuka.</p>
+      <p>Selama beberapa semester saya banyak belajar pengalaman membuat project. Saya suka bekerja secara kolaboratif dan selalu ingin meningkatkan keterampilan teknis saya.</p>
+      <p>Selain coding, saya tertarik pada desain pengalaman pengguna dan pemecahan masalah. Saya percaya bahwa kombinasi <strong>teknik</strong> dan <em>desain</em> adalah kunci membuat produk yang berguna dan menyenangkan.</p>
+    </section>
+
+    <!-- Education timeline -->
+    <section class="education">
+      <h2>Pendidikan</h2>
+      <dl class="timeline">
+        <dt>2024 - Sekarang</dt>
+        <dd>S1 Sistem Informasi — Universitas Hasanuddin </dd>
+
+        <dt>2022-2024</dt>
+        <dd>SMK/MA/SMA — Sekolah Contoh</dd>
+      </dl>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills">
+      <h2>Keterampilan</h2>
+      <ul>
+        <li>Python</li>
+        <li>HTML, JavaScript</li>
+      </ul>
+    </section>
+
+    <!-- Hobbies -->
+    <section class="hobbies">
+      <h2>Hobi &amp; Minat</h2>
+      <ol>
+        <li>Membaca buku novel</li>
+        <li>Desain UI/UX</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year-about"></span> A. Izza syathra. Semua hak cipta.</p>
+      <p><a href="#">LinkedIn</a> • <a href="#">Instagram</a> • <a href="#">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year-about').textContent = new Date().getFullYear();</script>
+</body>
+</html>
